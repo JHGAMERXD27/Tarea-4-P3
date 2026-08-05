@@ -1,0 +1,98 @@
+:root {
+    --primary: #0056b3;
+    --bg: #f4f7f6;
+    --text: #333;
+}
+
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+h2 { 
+    text-align: center; 
+    color: var(--primary); 
+    margin-bottom: 25px;
+}
+
+form { 
+    display: flex; 
+    gap: 15px; 
+    margin-bottom: 30px; 
+    flex-wrap: wrap;
+}
+
+input { 
+    flex: 1;
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 6px; 
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.3);
+}
+
+button { 
+    padding: 12px 20px; 
+    background-color: var(--primary); 
+    color: white; 
+    border: none; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+button:hover { background-color: #004494; }
+
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    background-color: white;
+}
+
+th, td { 
+    border-bottom: 1px solid #eee; 
+    padding: 15px; 
+    text-align: left; 
+}
+
+th { 
+    background-color: var(--primary); 
+    color: white; 
+    font-weight: 600;
+}
+
+th:first-child { border-radius: 6px 0 0 0; }
+th:last-child { border-radius: 0 6px 0 0; }
+
+.action-btns button {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    margin-right: 5px;
+}
+
+.btn-edit { background-color: #28a745; }
+.btn-edit:hover { background-color: #218838; }
+.btn-delete { background-color: #dc3545; }
+.btn-delete:hover { background-color: #c82333; }
