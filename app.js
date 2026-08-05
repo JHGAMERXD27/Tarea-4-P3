@@ -135,4 +135,3 @@ function saveData() {
 }
 
 // Renderizar al iniciar
-// Nota: el renderTable se ejecuta al iniciar sesión; no lo llamamos aquí directamente

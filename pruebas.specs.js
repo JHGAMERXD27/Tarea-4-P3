@@ -12,7 +12,6 @@ describe('Pruebas Automatizadas CRUD - Tarea 4', function() {
         await driver.findElement(By.id('login-username')).sendKeys('admin');
         await driver.findElement(By.id('login-password')).sendKeys('Qu3Dur@123');
         await driver.findElement(By.id('login-btn')).click();
-        // Esperamos a que el CRUD sea visible
         await driver.wait(until.elementIsVisible(driver.findElement(By.id('crud-section'))), 5000);
     }
 
@@ -39,7 +38,7 @@ describe('Pruebas Automatizadas CRUD - Tarea 4', function() {
         }
     });
 
-    // --- NUEVAS PRUEBAS DE LOGIN ---
+    // --- PRUEBAS DE LOGIN ---
     it('Login Negativo: Debería fallar con credenciales incorrectas', async function() {
         await driver.get(url);
         await driver.findElement(By.id('login-username')).sendKeys('hacker');
@@ -55,7 +54,7 @@ describe('Pruebas Automatizadas CRUD - Tarea 4', function() {
         await iniciarSesion();
     });
 
-    // --- PRUEBAS CRUD ACTUALIZADAS ---
+    // --- PRUEBAS CRUD ---
     it('Camino Positivo: Debería crear un usuario correctamente', async function() {
         await driver.get(url);
         await iniciarSesion(); // Pasamos el login primero
